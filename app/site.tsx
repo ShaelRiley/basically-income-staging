@@ -5,10 +5,12 @@ const navItems = [
   ["Basic Income", "/basic-income"],
   ["Campaigns", "/campaigns"],
   ["Candidates", "/candidates"],
+  ["Bill Tracker", "/bill-tracker"],
   ["Our Strategy", "/strategy"],
   ["Evidence", "/evidence"],
   ["Blog", "/blog"],
   ["Calendar", "/calendar"],
+  ["Contact", "/contact"],
   ["About", "/about"],
 ] as const;
 
@@ -71,6 +73,7 @@ export function Footer() {
         <div className="footer-column">
           <h2>Inspect</h2>
           <Link href="/candidates">Candidate Positions</Link>
+          <Link href="/bill-tracker">Congressional Bill Tracker</Link>
           <Link href="/results">Results & Work Log</Link>
           <Link href="/strategy">Selection Method</Link>
           <Link href="/evidence">Evidence</Link>
@@ -80,7 +83,7 @@ export function Footer() {
         </div>
         <div className="footer-column">
           <h2>Connect</h2>
-          <a href="mailto:contact@basicallyincome.org">Contact</a>
+          <Link href="/contact">Contact</Link>
           <Link href="/fund/strategic-backing">Strategic Backing</Link>
           <a href="https://discord.com/invite/wEpZZYwufm" rel="noreferrer">Discord</a>
           <a href="https://bsky.app/profile/basicallyincome.org" rel="noreferrer">Bluesky</a>

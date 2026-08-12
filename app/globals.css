@@ -220,7 +220,7 @@ img { max-width: 100%; height: auto; }
 .calendar-note h2 { margin: 0 0 8px; font-family: var(--font-archivo), sans-serif; font-size: 30px; line-height: 1.05; }
 .calendar-note p { max-width: 720px; margin: 0; color: #dbe7f7; }
 
-@media (max-width: 1120px) {
+@media (max-width: 1320px) {
   .desktop-nav { display: none; }
   .mobile-menu { display: block; }
   .header-actions { margin-left: auto; }
