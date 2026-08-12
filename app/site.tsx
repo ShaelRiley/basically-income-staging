@@ -10,6 +10,7 @@ const navItems = [
   ["Evidence", "/evidence"],
   ["Blog", "/blog"],
   ["Calendar", "/calendar"],
+  ["Outreach", "/outreach"],
   ["Contact", "/contact"],
   ["About", "/about"],
 ] as const;
@@ -83,6 +84,7 @@ export function Footer() {
         </div>
         <div className="footer-column">
           <h2>Connect</h2>
+          <Link href="/outreach">Education & Outreach</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/fund/strategic-backing">Strategic Backing</Link>
           <a href="https://discord.com/invite/wEpZZYwufm" rel="noreferrer">Discord</a>
