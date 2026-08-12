@@ -15,7 +15,7 @@ const levels = [
 
 export default function CandidatesPage() {
   return <PageShell>
-    <PageHero eyebrow="Candidate accountability" title="What candidates say should be easy to find." body="We preserve sourced public positions over time, distinguish targeted cash from universal basic income, and keep policy support separate from PAC endorsement." actions={<a className="button button-orange" href="mailto:contact@basicallyincome.org?subject=Candidate%20position%20source">Submit a Public Source</a>} aside={<><StatusPill tone="navy">Method before score</StatusPill><h3>No black-box ratings.</h3><p>Every classification needs a source, date, explanation, reviewer, and confidence level.</p></>} />
+    <PageHero eyebrow="Candidate accountability" title="What candidates say should be easy to find." body="We preserve sourced public positions over time, distinguish targeted cash from universal basic income, and keep policy support separate from PAC endorsement." actions={<a className="button button-orange" href="mailto:contact@basicallyincome.org?subject=Candidate%20position%20source">Submit a Public Source</a>} visual={{src: "/family-enterprise.webp", alt: "A family working together at its neighborhood bakery", caption: "Public policy is ultimately judged in the lives people can build.", tone: "navy"}} aside={<><StatusPill tone="navy">Method before score</StatusPill><h3>No black-box ratings.</h3><p>Every classification needs a source, date, explanation, reviewer, and confidence level.</p></>} />
 
     <section className="content-section"><div className="wide-shell">
       <h2>A descriptive ladder, not a yes-or-no badge.</h2><p className="lede">A candidate can move through these states as public commitments become clearer. The history remains visible.</p>

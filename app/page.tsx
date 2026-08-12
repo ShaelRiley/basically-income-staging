@@ -71,6 +71,23 @@ export default function Home() {
         <section className="section policy-section">
           <div className="section-shell">
             <SectionHeading eyebrow="A floor, not a ceiling" title="Money people can count on changes what feels possible." body="Basic income does not prescribe the good life. It gives more people the material latitude to choose one." align="center" />
+            <div className="visual-story-grid" aria-label="Human flourishing in an economy with greater security">
+              <figure className="visual-story visual-story-wide">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/family-future.webp" alt="A multigenerational family welcoming a newborn in a sunlit home" loading="lazy" />
+                <figcaption><b>A future that feels possible.</b><span>People who want children should live in an economy where building a family does not feel financially reckless.</span></figcaption>
+              </figure>
+              <figure className="visual-story">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/family-enterprise.webp" alt="A family opening a neighborhood bakery together" loading="lazy" />
+                <figcaption><b>Enterprise with a human center.</b><span>Security can widen the runway to start small, create value, and serve a neighborhood.</span></figcaption>
+              </figure>
+              <figure className="visual-story">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/community-abundance.webp" alt="Neighbors of many generations sharing food at a joyful block party" loading="lazy" />
+                <figcaption><b>Prosperity people can see.</b><span>Thriving means time together, local abundance, public life, and confidence in tomorrow.</span></figcaption>
+              </figure>
+            </div>
             <div className="flourish-grid">
               <article className="flourish-card family-card"><span>Family & care</span><h3>More room to care for children, elders, partners, and yourself.</h3><p>People who want children should be able to imagine affording them.</p></article>
               <article className="flourish-card work-card"><span>Work & bargaining</span><h3>A dependable floor changes the penalty for saying no.</h3><p>Leave a bad job, endure a search, train, or negotiate from firmer ground.</p></article>

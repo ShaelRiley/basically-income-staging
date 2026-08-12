@@ -15,7 +15,7 @@ const steps = [
 
 export default function StrategyPage() {
   return <PageShell>
-    <PageHero eyebrow="The UBI Leverage Loop" title="Make meaningful UBI support politically advantageous." body="Policies become viable partly because candidates encounter constituencies, money, attention, expertise, and public recognition when they support them. We are building that incentive layer for basic income." actions={<><ButtonLink href="/campaigns" variant="orange">See Campaigns</ButtonLink><ButtonLink href="/fund" variant="navy">Fund the Machinery</ButtonLink></>} aside={<><h3>Political thesis</h3><p>Research makes UBI credible. Organized electoral reward makes credibility consequential.</p></>} />
+    <PageHero eyebrow="The UBI Leverage Loop" title="Make meaningful UBI support politically advantageous." body="Policies become viable partly because candidates encounter constituencies, money, attention, expertise, and public recognition when they support them. We are building that incentive layer for basic income." actions={<><ButtonLink href="/campaigns" variant="orange">See Campaigns</ButtonLink><ButtonLink href="/fund" variant="navy">Fund the Machinery</ButtonLink></>} visual={{src: "/community-abundance.webp", alt: "A thriving neighborhood sharing a public celebration", caption: "The political reward is a constituency with a future worth fighting for.", tone: "orange"}} aside={<><h3>Political thesis</h3><p>Research makes UBI credible. Organized electoral reward makes credibility consequential.</p></>} />
 
     <section className="content-section"><div className="wide-shell">
       <h2>One political cycle. Repeated.</h2><p className="lede">Each step produces a public record and improves the selection of the next intervention.</p>

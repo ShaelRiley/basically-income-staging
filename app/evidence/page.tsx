@@ -14,7 +14,7 @@ const topics = [
 
 export default function EvidencePage() {
   return <PageShell>
-    <PageHero eyebrow="Evidence within reach" title="Simple enough to understand. Serious enough to scrutinize." body="Cash-transfer evidence is substantial and heterogeneous. Programs differ in amount, duration, eligibility, location, and design. We will say what each source can tell us and what it cannot." actions={<ButtonLink href="#topics" variant="orange">Explore the Evidence Map</ButtonLink>} aside={<><h3>Evidence rule</h3><p>A guaranteed-income pilot can inform UBI. It should not be silently redescribed as UBI.</p></>} />
+    <PageHero eyebrow="Evidence within reach" title="Simple enough to understand. Serious enough to scrutinize." body="Cash-transfer evidence is substantial and heterogeneous. Programs differ in amount, duration, eligibility, location, and design. We will say what each source can tell us and what it cannot." actions={<ButtonLink href="#topics" variant="orange">Explore the Evidence Map</ButtonLink>} visual={{src: "/family-future.webp", alt: "A family surrounding a newborn with warmth and care", caption: "The evidence matters because human time, health, care, and possibility matter.", tone: "gold"}} aside={<><h3>Evidence rule</h3><p>A guaranteed-income pilot can inform UBI. It should not be silently redescribed as UBI.</p></>} />
 
     <section className="content-section" id="topics"><div className="wide-shell"><h2>Six evidence pathways.</h2><p className="lede">The launch library is structured around the questions serious visitors actually ask.</p><div className="feature-grid three">{topics.map(([title, body]) => <article className="info-card" key={title}><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
 

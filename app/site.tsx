@@ -122,13 +122,30 @@ export function StatusPill({ children, tone = "orange" }: { children: ReactNode;
   return <span className={`status-pill status-${tone}`}>{children}</span>;
 }
 
-export function PageHero({ eyebrow, title, body, actions, aside }: {
+export function EditorialImage({ src, alt, caption, tone = "gold" }: {
+  src: string; alt: string; caption?: string; tone?: "gold" | "orange" | "navy";
+}) {
+  return (
+    <figure className={`editorial-image editorial-${tone}`}>
+      {/* Static assets keep the illustrated world dependable across runtimes. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} loading="lazy" />
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+  );
+}
+
+export function PageHero({ eyebrow, title, body, actions, aside, visual }: {
   eyebrow: string; title: string; body: string; actions?: ReactNode; aside?: ReactNode;
+  visual?: { src: string; alt: string; caption?: string; tone?: "gold" | "orange" | "navy" };
 }) {
   return (
     <section className="page-hero"><div className="page-hero-inner">
       <div className="page-hero-copy"><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{body}</p>{actions && <div className="hero-actions">{actions}</div>}</div>
-      {aside && <div className="page-hero-aside">{aside}</div>}
+      {(visual || aside) && <div className="page-hero-side">
+        {visual && <EditorialImage {...visual} />}
+        {aside && <div className="page-hero-aside">{aside}</div>}
+      </div>}
     </div></section>
   );
 }
