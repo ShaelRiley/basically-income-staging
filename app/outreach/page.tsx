@@ -18,7 +18,6 @@ export default function OutreachPage() {
       title="Learn together. Talk together. Build a UBI constituency."
       body="Electoral work depends on a public that understands basic income, can discuss it seriously, and knows where to gather. These recurring channels keep that constituency informed and connected."
       actions={<><ButtonLink href={roundtableUrl} variant="orange" external>Join Us on Clubhouse</ButtonLink><a className="button button-navy" href="mailto:contact@basicallyincome.org?subject=Join%20the%20weekly%20mailing%20list">Join the Mailing List</a></>}
-      visual={{src: "/community-abundance.webp", alt: "Families, friends, and neighbors gathering in a thriving community", caption: "Political community grows through repeated conversation, shared knowledge, and durable human connection.", tone: "orange"}}
       aside={<><StatusPill tone="orange">Every week</StatusPill><h3>Multiple ways to participate.</h3><p>Join a live conversation, receive the weekly email, or stay connected between events through Discord and Bluesky.</p></>}
     />
 

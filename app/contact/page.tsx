@@ -20,7 +20,6 @@ export default function ContactPage() {
       title="Talk to a person building UBI politics."
       body="Send us the question, source, invitation, opportunity, or criticism. Clear messages reach the right part of our small team faster."
       actions={<><a className="button button-orange" href="mailto:contact@basicallyincome.org">Email contact@basicallyincome.org</a><ButtonLink href="/calendar" variant="navy">See the Calendar</ButtonLink></>}
-      visual={{src: "/family-future.webp", alt: "A multigenerational family welcoming a new child", caption: "Political work begins with people choosing to speak, listen, and build together.", tone: "orange"}}
       aside={<><h3>One public inbox</h3><p><a href="mailto:contact@basicallyincome.org"><b>contact@basicallyincome.org</b></a></p><p>Include a source link, deadline, organization, or congressional district when relevant.</p></>}
     />
 

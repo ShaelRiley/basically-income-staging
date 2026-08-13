@@ -16,7 +16,6 @@ export default function CalendarPage() {
         title="Fill the calendar. Build the politics."
         body="Basically Income PAC uses public meetings, campaign actions, and serious conversations to turn support for basic income into political participation. This calendar is the shared record of what comes next."
         actions={<ButtonLink href={calendarUrl} variant="navy" external>Open in Google Calendar</ButtonLink>}
-        visual={{src: "/community-abundance.webp", alt: "Families and neighbors gathering for a joyful public celebration", caption: "Movements become real when people meet, organize, and imagine the future together.", tone: "orange"}}
         aside={<><span className="card-number">RECURRING COMMUNITY</span><h3>Basic Income Roundtable</h3><p>Saturdays at 11 a.m. Eastern, 10 Central, 9 Mountain, and 8 Pacific. New public events and campaign actions will be added here as they are scheduled.</p></>}
       />
 

@@ -1,12 +1,11 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ThemeToggle } from "./theme-toggle";
 
 const navItems = [
   ["Basic Income", "/basic-income"],
-  ["Campaigns", "/campaigns"],
   ["Candidates", "/candidates"],
   ["Bill Tracker", "/bill-tracker"],
-  ["Our Strategy", "/strategy"],
   ["Evidence", "/evidence"],
   ["Blog", "/blog"],
   ["Calendar", "/calendar"],
@@ -29,7 +28,7 @@ export function Header() {
     <>
       <div className="institution-bar">
         <span>The electoral engine for universal basic income.</span>
-        <Link href="/strategy">See how it works <span aria-hidden="true">→</span></Link>
+        <Link href="/candidates">See candidates &amp; campaigns <span aria-hidden="true">→</span></Link>
       </div>
       <header className="site-header">
         <div className="nav-shell">
@@ -38,6 +37,7 @@ export function Header() {
             {navItems.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
           </nav>
           <div className="header-actions">
+            <ThemeToggle />
             <Link className="button button-ghost button-small" href="/take-action">Take Action</Link>
             <Link className="button button-navy button-small" href="/fund">Fund the Work</Link>
           </div>
@@ -45,6 +45,7 @@ export function Header() {
             <summary>Menu</summary>
             <nav aria-label="Mobile navigation">
               {navItems.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
+              <ThemeToggle />
               <Link className="mobile-action" href="/take-action">Take Action</Link>
               <Link className="mobile-fund" href="/fund">Fund the Work</Link>
             </nav>
@@ -64,34 +65,22 @@ export function Footer() {
           <p>We move candidates toward basic income, then back serious champions where support can matter.</p>
           <p className="footer-note">Paid for by Basically Income PAC.</p>
         </div>
-        <div className="footer-column">
-          <h2>Act</h2>
-          <Link href="/campaigns">Current Campaign</Link>
-          <Link href="/take-action">Take Action</Link>
-          <a href="https://secure.actblue.com/donate/basicincome" rel="noreferrer">Contribute</a>
-          <a href="mailto:contact@basicallyincome.org?subject=Campaign%20updates">Get Updates</a>
-        </div>
-        <div className="footer-column">
-          <h2>Inspect</h2>
-          <Link href="/candidates">Candidate Positions</Link>
-          <Link href="/bill-tracker">Congressional Bill Tracker</Link>
-          <Link href="/results">Results & Work Log</Link>
-          <Link href="/strategy">Selection Method</Link>
-          <Link href="/evidence">Evidence</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/calendar">Calendar</Link>
-          <Link href="/fund">What Funding Enables</Link>
-        </div>
-        <div className="footer-column">
-          <h2>Connect</h2>
-          <Link href="/outreach">Education & Outreach</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/fund/strategic-backing">Strategic Backing</Link>
-          <a href="https://discord.com/invite/wEpZZYwufm" rel="noreferrer">Discord</a>
-          <a href="https://bsky.app/profile/basicallyincome.org" rel="noreferrer">Bluesky</a>
+        <div className="footer-signup">
+          <div>
+            <p className="eyebrow eyebrow-light">Join our mailing list</p>
+            <h2>One useful email each week.</h2>
+            <p>Campaign actions, PAC news, events, candidate developments, and new basic-income writing.</p>
+          </div>
+          <form action="mailto:contact@basicallyincome.org" method="post" encType="text/plain">
+            <label htmlFor="footer-email">What is your email?</label>
+            <div className="signup-row">
+              <input id="footer-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
+              <button className="button button-orange" type="submit">Subscribe</button>
+            </div>
+          </form>
         </div>
       </div>
-      <div className="footer-bottom"><span>Money for everyone.</span><span>BasicallyIncome.org</span></div>
+      <div className="footer-bottom"><span>Money for everyone.</span><span><Link href="/contact">Contact</Link> · <Link href="/about">About</Link> · BasicallyIncome.org</span></div>
     </footer>
   );
 }
@@ -140,17 +129,14 @@ export function EditorialImage({ src, alt, caption, tone = "gold" }: {
   );
 }
 
-export function PageHero({ eyebrow, title, body, actions, aside, visual }: {
+export function PageHero({ eyebrow, title, body, actions, aside }: {
   eyebrow: string; title: string; body: string; actions?: ReactNode; aside?: ReactNode;
   visual?: { src: string; alt: string; caption?: string; tone?: "gold" | "orange" | "navy" };
 }) {
   return (
     <section className="page-hero"><div className="page-hero-inner">
       <div className="page-hero-copy"><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{body}</p>{actions && <div className="hero-actions">{actions}</div>}</div>
-      {(visual || aside) && <div className="page-hero-side">
-        {visual && <EditorialImage {...visual} />}
-        {aside && <div className="page-hero-aside">{aside}</div>}
-      </div>}
+      {aside && <div className="page-hero-side"><div className="page-hero-aside">{aside}</div></div>}
     </div></section>
   );
 }

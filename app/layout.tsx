@@ -43,7 +43,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{__html: `(function(){try{var saved=localStorage.getItem('basically-income-theme');var theme=saved||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=theme}catch(e){document.documentElement.dataset.theme='light'}})();`}} />
+      </head>
       <body className={`${archivo.variable} ${sourceSans.variable} ${newsreader.variable}`}>
         {children}
       </body>

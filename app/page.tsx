@@ -55,7 +55,7 @@ export default function Home() {
               <h2>We’re selecting the next candidate ask.</h2>
               <p>Our team is screening races for candidate accessibility, strategic value, timing, supporter reach, and the plausibility of meaningful movement.</p>
               <div className="placard-actions">
-                <ButtonLink href="/campaigns" variant="navy">Follow the Selection</ButtonLink>
+                <ButtonLink href="/candidates" variant="navy">Follow the Selection</ButtonLink>
                 <a href="mailto:contact@basicallyincome.org?subject=Campaign%20updates">Get campaign updates</a>
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function Home() {
               <Eyebrow>Why show an empty state?</Eyebrow>
               <h3>Because political credibility begins with the truth.</h3>
               <p>We will not manufacture urgency or leave a stale action live. When a campaign opens, this module will name the candidate, the exact ask, the deadline, and the reason we selected the race.</p>
-              <Link href="/strategy">See the pressure-target screen <span aria-hidden="true">→</span></Link>
+              <Link href="/candidates">See the pressure-target screen <span aria-hidden="true">→</span></Link>
             </div>
           </div>
         </section>
@@ -71,23 +71,6 @@ export default function Home() {
         <section className="section policy-section">
           <div className="section-shell">
             <SectionHeading eyebrow="A floor, not a ceiling" title="Money people can count on changes what feels possible." body="Basic income does not prescribe the good life. It gives more people the material latitude to choose one." align="center" />
-            <div className="visual-story-grid" aria-label="Human flourishing in an economy with greater security">
-              <figure className="visual-story visual-story-wide">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/family-future.webp" alt="A multigenerational family welcoming a newborn in a sunlit home" loading="lazy" />
-                <figcaption><b>A future that feels possible.</b><span>People who want children should live in an economy where building a family does not feel financially reckless.</span></figcaption>
-              </figure>
-              <figure className="visual-story">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/family-enterprise.webp" alt="A family opening a neighborhood bakery together" loading="lazy" />
-                <figcaption><b>Enterprise with a human center.</b><span>Security can widen the runway to start small, create value, and serve a neighborhood.</span></figcaption>
-              </figure>
-              <figure className="visual-story">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/community-abundance.webp" alt="Neighbors of many generations sharing food at a joyful block party" loading="lazy" />
-                <figcaption><b>Prosperity people can see.</b><span>Thriving means time together, local abundance, public life, and confidence in tomorrow.</span></figcaption>
-              </figure>
-            </div>
             <div className="flourish-grid">
               <article className="flourish-card family-card"><span>Family & care</span><h3>More room to care for children, elders, partners, and yourself.</h3><p>People who want children should be able to imagine affording them.</p></article>
               <article className="flourish-card work-card"><span>Work & bargaining</span><h3>A dependable floor changes the penalty for saying no.</h3><p>Leave a bad job, endure a search, train, or negotiate from firmer ground.</p></article>
@@ -103,13 +86,13 @@ export default function Home() {
             <div className="loop-grid">
               {loop.map(([number, title, body]) => <article className="loop-card" key={number}><span>{number}</span><h3>{title}</h3><p>{body}</p></article>)}
             </div>
-            <div className="section-action"><ButtonLink href="/strategy" variant="navy">Inspect the Full Method</ButtonLink></div>
+            <div className="section-action"><ButtonLink href="/candidates" variant="navy">See the Method in Action</ButtonLink></div>
           </div>
         </section>
 
         <section className="section record-section">
           <div className="section-shell record-grid">
-            <div><Eyebrow>Proof before promise</Eyebrow><h2>What we did. What happened. What we can claim.</h2><p>Campaign activity, candidate behavior, endorsements, resource deployments, and election results are different facts. Our public record keeps them separate.</p><div className="record-actions"><ButtonLink href="/results" variant="orange">Results & Work Log</ButtonLink><ButtonLink href="/candidates" variant="navy">Candidate Positions</ButtonLink></div></div>
+            <div><Eyebrow>Proof before promise</Eyebrow><h2>What we did. What happened. What we can claim.</h2><p>Campaign activity, candidate behavior, endorsements, resource deployments, and election results are different facts. Our candidate record keeps them separate.</p><div className="record-actions"><ButtonLink href="/candidates#record" variant="orange">Inspect the Public Record</ButtonLink><ButtonLink href="/evidence" variant="navy">Read the Evidence</ButtonLink></div></div>
             <div className="ledger-card">
               <div className="ledger-row"><span>Activity</span><b>What the PAC did</b></div>
               <div className="ledger-row"><span>Output</span><b>What the work produced</b></div>
@@ -120,7 +103,7 @@ export default function Home() {
           </div>
         </section>
 
-        <CtaBand eyebrow="Fund UBI politics" title="More capacity means more political surface area." body="Funding expands our ability to screen races, launch pressure campaigns, support endorsed candidates, produce persuasive media, and publish what happened." primary={<ButtonLink href="https://secure.actblue.com/donate/basicincome" variant="cream" external>Fund the Work</ButtonLink>} secondary={<ButtonLink href="/fund" variant="outline">See What Funding Enables</ButtonLink>} />
+        <CtaBand eyebrow="Fund UBI politics" title="More capacity means more political surface area." body="Funding expands our ability to screen races, launch pressure campaigns, support endorsed candidates, produce persuasive media, and publish what happened." primary={<ButtonLink href="https://secure.actblue.com/donate/basically-income-1?amount=8" variant="cream" external>Give $8 Monthly</ButtonLink>} secondary={<ButtonLink href="/fund" variant="outline">See Active Donation Campaigns</ButtonLink>} />
       </main>
       <Footer />
     </>
