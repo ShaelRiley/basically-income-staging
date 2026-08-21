@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ButtonLink, CtaBand, Eyebrow, Header, Footer, SectionHeading, StatusPill } from "./site";
 
+const heroPhoto = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/A_family_in_the_park_on_the_grass.jpg/1280px-A_family_in_the_park_on_the_grass.jpg";
+
 const loop = [
   ["01", "Scan", "Monitor races, candidates, timing, and policy openings."],
   ["02", "Select", "Choose pressure points where finite resources may matter."],
@@ -31,11 +33,13 @@ export default function Home() {
             </div>
             <div className="hero-art">
               <div className="hero-art-frame">
-                {/* Static asset avoids preview-worker image proxy failures. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/basically-income-family.webp" alt="An exuberant illustrated family gathered around the Basically Income emblem" width="1672" height="941" />
+                <img src={heroPhoto} alt="A family relaxing together in a Seoul park on a summer afternoon" width="1280" height="853" style={{ aspectRatio: "3 / 2", objectFit: "cover", objectPosition: "center" }} />
               </div>
               <div className="hero-art-note"><b>Money is the means.</b> Human flourishing is the point.</div>
+              <p style={{ margin: "42px 8px 0", color: "#fff", fontSize: 12, lineHeight: 1.45 }}>
+                Photo: <a href="https://commons.wikimedia.org/wiki/File:A_family_in_the_park_on_the_grass.jpg" rel="noreferrer"><u>Daniel Andrew Szpunar</u></a> via Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noreferrer"><u>CC BY-SA 4.0</u></a>
+              </p>
             </div>
           </div>
         </section>
