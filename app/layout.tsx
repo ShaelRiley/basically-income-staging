@@ -33,7 +33,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Basically Income PAC",
     description: "Money for everyone. Build the electoral engine for universal basic income.",
-    images: ["/basically-income-family.webp"],
   },
 };
 

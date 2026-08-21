@@ -5,12 +5,9 @@ import { ThemeToggle } from "./theme-toggle";
 const navItems = [
   ["Basic Income", "/basic-income"],
   ["Candidates", "/candidates"],
-  ["Bill Tracker", "/bill-tracker"],
   ["Evidence", "/evidence"],
   ["Blog", "/blog"],
-  ["Calendar", "/calendar"],
   ["Outreach", "/outreach"],
-  ["Contact", "/contact"],
   ["About", "/about"],
 ] as const;
 
@@ -62,16 +59,15 @@ export function Footer() {
       <div className="footer-shell">
         <div className="footer-intro">
           <Brand compact />
-          <p>We move candidates toward basic income, then back serious champions where support can matter.</p>
           <p className="footer-note">Paid for by Basically Income PAC.</p>
         </div>
         <div className="footer-signup">
           <div>
             <p className="eyebrow eyebrow-light">Join our mailing list</p>
-            <h2>One useful email each week.</h2>
-            <p>Campaign actions, PAC news, events, candidate developments, and new basic-income writing.</p>
+            <h2>Stay up to date.</h2>
+            <p>Get the latest news, events, campaign actions, and basic-income writing from Basically Income.</p>
           </div>
-          <form action="mailto:contact@basicallyincome.org" method="post" encType="text/plain">
+          <form action="mailto:contact@basicallyincome.org?subject=Join%20the%20mailing%20list" method="post" encType="text/plain">
             <label htmlFor="footer-email">What is your email?</label>
             <div className="signup-row">
               <input id="footer-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />
@@ -121,7 +117,6 @@ export function EditorialImage({ src, alt, caption, tone = "gold" }: {
 }) {
   return (
     <figure className={`editorial-image editorial-${tone}`}>
-      {/* Static assets keep the illustrated world dependable across runtimes. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={src} alt={alt} loading="lazy" />
       {caption && <figcaption>{caption}</figcaption>}

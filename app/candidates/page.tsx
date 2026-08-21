@@ -44,6 +44,7 @@ export default function CandidatesPage() {
         <article className="timeline-item"><span>Endorsement</span><div><h3>Matt Dodson · U.S. Senate, New Mexico</h3><p>An external candidate record lists the Basically Income PAC endorsement. The expanded record will attach the candidate’s UBI commitment, decision rationale, PAC support, and election outcome.</p><p><StatusPill tone="gold">Verified external record</StatusPill> <a href="https://ballotpedia.org/Matt_Dodson" rel="noreferrer"><b>View source →</b></a></p></div></article>
       </div>
       <div className="notice-box"><b>Correction standard:</b> candidates and authorized staff may submit public statements, platform pages, video, legislation, or other verifiable sources. Material corrections will be reviewed and preserved in the history.</div>
+      <div className="hero-actions"><ButtonLink href="/bill-tracker" variant="navy">Track Basic-Income Legislation</ButtonLink></div>
     </div></section>
 
     <CtaBand eyebrow="Keep the pressure on" title="Political opportunities do not arrive on a fundraising schedule." body="Monthly support sustains candidate research, campaign launches, public records, creative work, and follow-through." primary={<ButtonLink href="https://secure.actblue.com/donate/basically-income-1?amount=8" variant="cream" external>Give $8 Monthly</ButtonLink>} secondary={<ButtonLink href="/fund" variant="outline">See Active Donation Campaigns</ButtonLink>} />
